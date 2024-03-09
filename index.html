@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kreon:wght@600&family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <article class="input-evento">
+          <form id="form-datetime" class="form-date">
+            <h1 class="title__evento">Evento</h1>
+            <label for="hora-evento" class="descripcion-evento"
+              >Ingresa la fecha de comienzo del evento:
+            </label>
+            <input type="datetime-local" id="hora-evento" class="select-date" />
+            <input
+              class="submit__evento"
+              type="submit"
+              value="Empezar"
+              onclick="getTargetDate()"
+            />
+          </form>
+        </article>
+        <article id="countdown" class="countdown madimi-one-regular">
+          <span id="countdown__days"> 00 </span>
+          <span class="timer-unit">d</span>
+          <span id="countdown__hours"> 00 </span>
+          <span class="timer-unit">h</span>
+          <span id="countdown__minutes"> 00 </span>
+          <span class="timer-unit">m</span>
+          <span id="countdown__seconds"> 00 </span>
+          <span class="timer-unit">s</span>
+        </article>
+        <p id="timer" class="message-timer alerta">Ya comenzo el evento!</p>
+      </section>
+    </main>
+  </body>
+  <script src="countDown.js"></script>
+</html>
